@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Saúde RS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SOS Saúde RS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar/ -->
+
+    <!-- Formulário -->
+    <div class="container mt-4 p-4">
+        <!---------------------- Informações Pessoais -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <h2>Informações pessoais</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-4">
+            <div class="col-md-6">
+                <div class="p-2">
+                    <label for="primeiroNome" class="form-label">Primeiro Nome</label>
+                    <input type="text" class="form-control" id="primeiroNome" placeholder="Digite seu nome">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-2">
+                    <label for="sobrenome" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="sobrenome" placeholder="Digite seu sobrenome">
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-4">
+            <div class="col-md-6">
+                <div class="p-2">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="XXX.XXX.XXX-XX">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-2">
+                    <label for="dataNascimento" class="form-label">Data de nascimento</label>
+                    <input type="date" class="form-control" id="dataNascimento">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-2">
+                    <label for="sexoBiologico" class="form-label">Sexo biológico</label>
+                    <select class="form-select" id="sexoBiologico" aria-label="Default select example">
+                        <option value="1">Masculino</option>
+                        <option value="2">Feminino</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!---------------------- Informações Pessoais/ -->
+
+        <!---------------------- Informações de contato -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <hr class="transparent-line">
+                    <h2>Informações de contato</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <h5>Contato pessoal</h5>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="p-2">
+                    <label for="ddd" class="form-label">DDD</label>
+                    <input type="text" class="form-control" id="ddd" placeholder="XX">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-2">
+                    <label for="numeroTelefone" class="form-label">Número de Telefone</label>
+                    <input type="text" class="form-control" id="numeroTelefone" placeholder="XXXXX-XXXX">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-2">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="contato@exemplo.com">
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <h5>Contato de emergência</h5>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-4">
+            <div class="col-md-6">
+                <div class="p-2">
+                    <label for="nomeEmergencia" class="form-label">Primeiro Nome</label>
+                    <input type="text" class="form-control" id="nomeEmergencia" placeholder="Nome do contato de emergência">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-2">
+                    <label for="sobrenomeEmergencia" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="sobrenomeEmergencia" placeholder="Sobrenome do contato de emergência">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="p-2">
+                    <label for="dddEmergencia" class="form-label">DDD</label>
+                    <input type="text" class="form-control" id="dddEmergencia" placeholder="XX">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-2">
+                    <label for="numeroTelefoneEmergencia" class="form-label">Número de Telefone</label>
+                    <input type="text" class="form-control" id="numeroTelefoneEmergencia" placeholder="XXXXX-XXXX">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-2">
+                    <label for="emailEmergencia" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="emailEmergencia" placeholder="contato@exemplo.com">
+                </div>
+            </div>
+        </div>
+        <!---------------------- Informações de contato/ -->
+        <!---------------------- Próxima página -->
+        <div class="row">
+            <hr class="transparent-line">
+            <div class="d-flex justify-content-start mt-3 gap-3">
+                <a href="formulario2.html" class="btn btn-primary px-5" role="button">Próximo</a>
+            </div>
+        </div>
+        <!---------------------- Próxima página/ -->
+    </div>
+    <!-- Formulário/ -->
+
+
+
+    
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright: SOS Saúde RS
+        </div>
+    </footer>
+    <!-- Footer/ -->
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/formulario1.js"></script>
+</body>
+</html>

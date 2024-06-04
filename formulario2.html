@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Saúde RS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SOS Saúde RS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar/ -->
+
+    <!-- Formulário -->
+    <div class="container mt-4 p-4">
+        <!---------------------- Histórico de Saúde -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <h2>Histórico de saúde</h2>
+                </div>
+            </div>
+        </div>
+
+        <!---------------------- Doenças crônicas -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <h5>Você possui alguma das seguintes doenças crônicas?</h5>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-5">
+            <div class="col-md-3">
+                <div class="p-2">
+                    <input class="form-check-input" type="checkbox" value="" id="diabetes">
+                    <label class="form-check-label" for="diabetes">Diabetes</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-2">
+                    <input class="form-check-input" type="checkbox" value="" id="hipertensao">
+                    <label class="form-check-label" for="hipertensao">Hipertensão</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-2">
+                    <input class="form-check-input" type="checkbox" value="" id="asma">
+                    <label class="form-check-label" for="asma">Asma</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-2">
+                    <input class="form-check-input" type="checkbox" value="" id="doencaCardiaca">
+                    <label class="form-check-label" for="doencaCardiaca">Doença cardíaca</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-5">
+            <div class="col-md-3">
+                <div class="p-2">
+                    <input class="form-check-input" type="checkbox" value="" id="doencaRenal">
+                    <label class="form-check-label" for="doencaRenal">Doença Renal</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-center p-2">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="outro">
+                    <label class="form-check-label me-2" for="outro">Outro</label>
+                    <input type="text" class="form-control" id="especifique" placeholder="Especifique">
+                </div>
+            </div>
+        </div>
+        <!---------------------- Doenças crônicas/ -->
+        <!---------------------- Alergias -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <h5>Você possui alguma alergia?</h5>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="d-flex align-items-center p-2">
+                <input class="form-check-input me-2" type="radio" name="alergia" id="temAlergia" value="temAlergia">
+                <label class="form-check-label me-2" for="temAlergia">Sim, tenho a(s) seguinte(s) alergia(s):</label>             
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="d-flex align-items-center p-2">
+                <textarea class="form-control" id="alergiaTextarea" aria-label="With textarea"></textarea>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="d-flex align-items-center p-2">
+                <input class="form-check-input me-2" type="radio" name="alergia" id="naoTemAlergia" value="naoTemAlergia">
+                <label class="form-check-label me-2" for="naoTemAlergia">Não tenho alergias conhecidas</label>             
+            </div>
+        </div>
+        <!---------------------- Alergias/ -->
+
+        <!---------------------- Medicamentos -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <h5>Você está tomando algum medicamento atualmente?</h5>
+                    <hr>
+                    <button type="button" class="btn btn-primary mb-3" id="botaoAdicionaMedicamento">Adicionar medicamento +</button>
+                </div>
+            </div>
+        </div>
+        <div id="containerMedicamentos"></div>
+        <!---------------------- Medicamentos/ -->
+
+        <!---------------------- Cirurgias -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <h5>Você passou por alguma cirurgia?</h5>
+                    <hr>
+                    <button type="button" class="btn btn-primary mb-3" id="botaoAdicionaCirurgia">Adicionar cirurgia +</button>
+                </div>
+            </div>
+        </div>
+        <div id="containerCirurgias"></div>
+        <!---------------------- Cirurgias/ -->
+
+        <!---------------------- Internações Hospitalares -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <h5>Você já foi internado em um hospital?</h5>
+                    <hr>
+                    <button type="button" class="btn btn-primary mb-3" id="botaoAdicionaInternacao">Adicionar internação +</button>
+                </div>
+            </div>
+        </div>
+        <div id="containerInternacoes"></div>
+        <!---------------------- Internações Hospitalares/ -->
+
+        <!---------------------- Hábitos de Vida -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <h5>Você faz uso de alguma das seguintes substâncias?</h5>
+                    <hr>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="usoTabaco">
+                        <label class="form-check-label" for="usoTabaco">Tabaco</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="usoAlcool">
+                        <label class="form-check-label" for="usoAlcool">Bebidas alcoólicas</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="usoDrogas">
+                        <label class="form-check-label" for="usoDrogas">Drogas recreativas</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------- Hábitos de Vida/ -->
+
+        <!---------------------- Vacinas -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <hr class="transparent-line">
+                    <h5>Suas vacinas estão em dia?</h5>
+                    <hr>
+                    <div class="mb-3 vacina-item">
+                        <label class="form-label">Vacina contra a gripe</label>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="vacinaGripe" id="vacinaGripeSim" value="sim">
+                            <label class="form-check-label" for="vacinaGripeSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaGripe" id="vacinaGripeNao" value="nao">
+                            <label class="form-check-label" for="vacinaGripeNao">Não</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaGripe" id="vacinaGripeNaoSei" value="naoSei">
+                            <label class="form-check-label" for="vacinaGripeNaoSei">Não sei</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 vacina-item">
+                        <label class="form-label">Vacina contra a COVID-19</label>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="vacinaCovid" id="vacinaCovidSim" value="sim">
+                            <label class="form-check-label" for="vacinaCovidSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaCovid" id="vacinaCovidNao" value="nao">
+                            <label class="form-check-label" for="vacinaCovidNao">Não</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaCovid" id="vacinaCovidNaoSei" value="naoSei">
+                            <label class="form-check-label" for="vacinaCovidNaoSei">Não sei</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 vacina-item">
+                        <label class="form-label">Vacina contra o tétano</label>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="vacinaTetano" id="vacinaTetanoSim" value="sim">
+                            <label class="form-check-label" for="vacinaTetanoSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaTetano" id="vacinaTetanoNao" value="nao">
+                            <label class="form-check-label" for="vacinaTetanoNao">Não</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaTetano" id="vacinaTetanoNaoSei" value="naoSei">
+                            <label class="form-check-label" for="vacinaTetanoNaoSei">Não sei</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 vacina-item">
+                        <label class="form-label">Vacina contra Hepatite A</label>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="vacinaHepatiteA" id="vacinaHepatiteASim" value="sim">
+                            <label class="form-check-label" for="vacinaHepatiteASim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaHepatiteA" id="vacinaHepatiteANao" value="nao">
+                            <label class="form-check-label" for="vacinaHepatiteANao">Não</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaHepatiteA" id="vacinaHepatiteANaoSei" value="naoSei">
+                            <label class="form-check-label" for="vacinaHepatiteANaoSei">Não sei</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 vacina-item">
+                        <label class="form-label">Vacina contra Hepatite B</label>
+                        <div class="form-check form-check-inline ms-3">
+                            <input class="form-check-input" type="radio" name="vacinaHepatiteB" id="vacinaHepatiteBSim" value="sim">
+                            <label class="form-check-label" for="vacinaHepatiteBSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaHepatiteB" id="vacinaHepatiteBNao" value="nao">
+                            <label class="form-check-label" for="vacinaHepatiteBNao">Não</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="vacinaHepatiteB" id="vacinaHepatiteBNaoSei" value="naoSei">
+                            <label class="form-check-label" for="vacinaHepatiteBNaoSei">Não sei</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------- Vacinas/ -->
+
+        <!---------------------- Histórico de Saúde/ -->
+        <!---------------------- Próxima página -->
+        <div class="col-md">
+            <hr class="transparent-line">
+            <div class="d-flex justify-content-start mt-3 gap-3">
+                <a href="formulario1.html" class="btn btn-primary px-5" role="button">Anterior</a>
+                <a href="formulario3.html" class="btn btn-primary px-5" role="button">Próximo</a>
+            </div>
+        </div>
+        <!---------------------- Próxima página -->
+    </div>
+    <!-- Formulário/ -->
+
+    
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright: SOS Saúde RS
+        </div>
+    </footer>
+    <!-- Footer/ -->
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/formulario2.js"></script>
+</body>
+</html>

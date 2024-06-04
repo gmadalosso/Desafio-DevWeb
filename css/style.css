@@ -1,0 +1,75 @@
+/* navbar */
+.navbar {
+    background-color: #1b4965;
+}
+
+/* card de doenças homepage */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin-top: auto;
+}
+
+/* formulário de triagem homepage */
+.formulario-section {
+    padding: 2rem;
+    
+}
+
+.formulario-section .btn {
+    margin-top: 1rem;
+}
+
+.formulario-section img {
+    max-width: 80%; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* jumbotron homepage */
+
+.custom-jumbotron{
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+}
+
+/* pagina formulário */
+.form-step {
+    display: none;
+}
+
+.form-step:not(.d-none) {
+    display: block;
+}
+
+.transparent-line {
+    height: 20px; /* Adjust the height as needed */
+    background-color: transparent;
+    border: none;
+    margin: 0; /* Adjust margins as needed */
+}
+
+/* formulário vacinas */
+.vacina-item {
+    display: flex;
+    align-items: center;
+}
+
+.vacina-item .form-check-inline {
+    margin-left: 1rem; /* Adjust the space as needed */
+}
+
+.vacina-item .form-label {
+    width: 200px; /* Adjust the width as needed for alignment */
+}
+

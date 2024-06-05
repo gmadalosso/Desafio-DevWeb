@@ -272,7 +272,121 @@ document.addEventListener('DOMContentLoaded', function() {
     checkGastrointestinalProblems();
 });
 
+// Problemas respiratórios
+document.addEventListener('DOMContentLoaded', function() {
+    // Problemas Respiratórios
+    const tosseSim = document.getElementById('tosseSim');
+    const tosseNao = document.getElementById('tosseNao');
+    const TosseSection = document.getElementById('TosseSection');
+    const tipoTosseRadios = document.querySelectorAll('#TosseSection input[type="radio"]');
 
+    const dificuldadeRespirarSim = document.getElementById('dificuldadeRespirarSim');
+    const dificuldadeRespirarNao = document.getElementById('dificuldadeRespirarNao');
+    const IntensidadeDificuldadeRespirarSection = document.getElementById('IntensidadeDificuldadeRespirarSection');
+    const intensidadeRadios = document.querySelectorAll('#IntensidadeDificuldadeRespirarSection input[type="radio"]');
 
+    function toggleTosseSection(show) {
+        if (show) {
+            TosseSection.classList.remove('d-none');
+            tipoTosseRadios.forEach(radio => {
+                radio.disabled = false;
+            });
+        } else {
+            TosseSection.classList.add('d-none');
+            tipoTosseRadios.forEach(radio => {
+                radio.disabled = true;
+                radio.checked = false;
+            });
+        }
+    }
 
+    function toggleIntensidadeDificuldadeRespirarSection(show) {
+        if (show) {
+            IntensidadeDificuldadeRespirarSection.classList.remove('d-none');
+            intensidadeRadios.forEach(radio => {
+                radio.disabled = false;
+            });
+        } else {
+            IntensidadeDificuldadeRespirarSection.classList.add('d-none');
+            intensidadeRadios.forEach(radio => {
+                radio.disabled = true;
+                radio.checked = false;
+            });
+        }
+    }
 
+    tosseSim.addEventListener('change', function() {
+        if (this.checked) {
+            toggleTosseSection(true);
+        }
+    });
+
+    tosseNao.addEventListener('change', function() {
+        if (this.checked) {
+            toggleTosseSection(false);
+        }
+    });
+
+    dificuldadeRespirarSim.addEventListener('change', function() {
+        if (this.checked) {
+            toggleIntensidadeDificuldadeRespirarSection(true);
+        }
+    });
+
+    dificuldadeRespirarNao.addEventListener('change', function() {
+        if (this.checked) {
+            toggleIntensidadeDificuldadeRespirarSection(false);
+        }
+    });
+
+    if (tosseSim.checked) {
+        toggleTosseSection(true);
+    } else {
+        toggleTosseSection(false);
+    }
+
+    if (dificuldadeRespirarSim.checked) {
+        toggleIntensidadeDificuldadeRespirarSection(true);
+    } else {
+        toggleIntensidadeDificuldadeRespirarSection(false);
+    }
+});
+
+//Sintomas de pele
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Sintomas de Pele
+    const peleSim = document.getElementById('peleSim');
+    const peleNao = document.getElementById('peleNao');
+    const PeleSection = document.getElementById('PeleSection');
+    const parteCorpo = document.getElementById('parteCorpo');
+
+    function togglePeleSection(show) {
+        if (show) {
+            PeleSection.classList.remove('d-none');
+            parteCorpo.disabled = false;
+        } else {
+            PeleSection.classList.add('d-none');
+            parteCorpo.disabled = true;
+            parteCorpo.value = '';
+        }
+    }
+
+    peleSim.addEventListener('change', function() {
+        if (this.checked) {
+            togglePeleSection(true);
+        }
+    });
+
+    peleNao.addEventListener('change', function() {
+        if (this.checked) {
+            togglePeleSection(false);
+        }
+    });
+
+    if (peleSim.checked) {
+        togglePeleSection(true);
+    } else {
+        togglePeleSection(false);
+    }
+});

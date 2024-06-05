@@ -3,44 +3,65 @@
 document.addEventListener('DOMContentLoaded', function() {
     const contatoEnchenteSim = document.getElementById('contatoEnchenteSim');
     const contatoEnchenteNao = document.getElementById('contatoEnchenteNao');
+    const feridasExpostasSection = document.getElementById('feridasExpostasSection');
     const feridasExpostasSim = document.getElementById('feridasExpostasSim');
     const feridasExpostasNao = document.getElementById('feridasExpostasNao');
 
-    function toggleFeridasExpostas(enabled) {
-        feridasExpostasSim.disabled = !enabled;
-        feridasExpostasNao.disabled = !enabled;
+    function toggleFeridasExpostasSection(show) {
+        if (show) {
+            feridasExpostasSection.classList.remove('d-none');
+            feridasExpostasSim.disabled = false;
+            feridasExpostasNao.disabled = false;
+        } else {
+            feridasExpostasSection.classList.add('d-none');
+            feridasExpostasSim.disabled = true;
+            feridasExpostasNao.disabled = true;
+            feridasExpostasSim.checked = false;
+            feridasExpostasNao.checked = false;
+        }
     }
 
     contatoEnchenteSim.addEventListener('change', function() {
         if (this.checked) {
-            toggleFeridasExpostas(true);
+            toggleFeridasExpostasSection(true);
         }
     });
 
     contatoEnchenteNao.addEventListener('change', function() {
         if (this.checked) {
-            toggleFeridasExpostas(false);
-            feridasExpostasSim.checked = false;
-            feridasExpostasNao.checked = false;
+            toggleFeridasExpostasSection(false);
         }
     });
+
+    if (contatoEnchenteSim.checked) {
+        toggleFeridasExpostasSection(true);
+    } else {
+        toggleFeridasExpostasSection(false);
+    }
 });
+
 
 //Febre
 
 document.addEventListener('DOMContentLoaded', function() {
     const febreSim = document.getElementById('febreSim');
     const febreNao = document.getElementById('febreNao');
+    const febreSection = document.getElementById('febreSection');
     const temperaturaMaxima = document.getElementById('temperaturaMaxima');
     const calafriosSim = document.getElementById('calafriosSim');
     const calafriosNao = document.getElementById('calafriosNao');
 
-    function toggleFebreFields(enabled) {
-        temperaturaMaxima.disabled = !enabled;
-        calafriosSim.disabled = !enabled;
-        calafriosNao.disabled = !enabled;
-
-        if (!enabled) {
+    function toggleCamposFebre(show) {
+        if (show) {
+            febreSection.classList.remove('d-none');
+            temperaturaMaxima.disabled = false;
+            calafriosSim.disabled = false;
+            calafriosNao.disabled = false;
+        } else {
+            febreSection.classList.add('d-none');
+            temperaturaMaxima.disabled = true;
+            calafriosSim.disabled = true;
+            calafriosNao.disabled = true;
             temperaturaMaxima.value = '';
             calafriosSim.checked = false;
             calafriosNao.checked = false;
@@ -49,15 +70,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     febreSim.addEventListener('change', function() {
         if (this.checked) {
-            toggleFebreFields(true);
+            toggleCamposFebre(true);
         }
     });
 
     febreNao.addEventListener('change', function() {
         if (this.checked) {
-            toggleFebreFields(false);
+            toggleCamposFebre(false);
         }
     });
+
+    if (febreSim.checked) {
+        toggleCamposFebre(true);
+    } else {
+        toggleCamposFebre(false);
+    }
 
     temperaturaMaxima.addEventListener('input', function() {
         let value = this.value.replace(/[^\d]/g, ''); 
@@ -90,22 +117,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//Dores musculares
 document.addEventListener('DOMContentLoaded', function() {
     const doresSim = document.getElementById('doresSim');
     const doresNao = document.getElementById('doresNao');
-    const bodyPartsCheckboxes = document.querySelectorAll('#bodyParts input[type="checkbox"]');
+    const DoresMuscularesSection = document.getElementById('DoresMuscularesSection');
+    const bodyPartsCheckboxes = document.querySelectorAll('#DoresMuscularesSection input[type="checkbox"]');
     const outraDor = document.getElementById('outraDor');
 
-    function toggleBodyParts(enabled) {
-        bodyPartsCheckboxes.forEach(checkbox => {
-            checkbox.disabled = !enabled;
-            if (!enabled) {
+    function toggleBodyParts(show) {
+        if (show) {
+            DoresMuscularesSection.classList.remove('d-none');
+            bodyPartsCheckboxes.forEach(checkbox => {
+                checkbox.disabled = false;
+            });
+            outraDor.disabled = false;
+        } else {
+            DoresMuscularesSection.classList.add('d-none');
+            bodyPartsCheckboxes.forEach(checkbox => {
+                checkbox.disabled = true;
                 checkbox.checked = false;
-            }
-        });
-        outraDor.disabled = !enabled;
-        if (!enabled) {
+            });
+            outraDor.disabled = true;
             outraDor.value = '';
         }
     }
@@ -128,6 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleBodyParts(false);
     }
 });
+
 
 //Dor de cabeça
 document.addEventListener('DOMContentLoaded', function() {

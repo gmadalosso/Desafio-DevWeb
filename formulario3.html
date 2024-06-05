@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <!---------------------- Contato com -->
+        <!---------------------- Contato com água-->
         <div class="row gx-5">
             <div class="col-md">
                 <div class="p-2">
@@ -62,21 +62,22 @@
                         <label class="form-check-label" for="contatoEnchenteNao">Não</label>
                     </div>
         
-                    <div class="col-md mt-4">
-                        <h6>Se sim, você teve feridas ou cortes expostos durante o contato? </h6>
-                    </div>
-        
-                    <div class="form-check form-check-inline ms-3 mb-3">
-                        <input class="form-check-input" type="radio" name="feridasExpostas" id="feridasExpostasSim" value="sim" disabled>
-                        <label class="form-check-label" for="feridasExpostasSim">Sim</label>
-                    </div>
-                    <div class="form-check form-check-inline mb-3">
-                        <input class="form-check-input" type="radio" name="feridasExpostas" id="feridasExpostasNao" value="nao" disabled>
-                        <label class="form-check-label" for="feridasExpostasNao">Não</label>
+                    <div id="feridasExpostasSection" class="d-none">
+                        <div class="col-md mt-4">
+                            <h6>Se sim, você teve feridas ou cortes expostos durante o contato? </h6>
+                        </div>
+                        <div class="form-check form-check-inline ms-3 mb-3">
+                            <input class="form-check-input" type="radio" name="feridasExpostas" id="feridasExpostasSim" value="sim" disabled>
+                            <label class="form-check-label" for="feridasExpostasSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline mb-3">
+                            <input class="form-check-input" type="radio" name="feridasExpostas" id="feridasExpostasNao" value="nao" disabled>
+                            <label class="form-check-label" for="feridasExpostasNao">Não</label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
 
         <!---------------------- Contato com água/ -->
 
@@ -99,31 +100,34 @@
                         <label class="form-check-label" for="febreNao">Não</label>
                     </div>
 
-                    <div class="col-md mt-4">
-                        <h6>Se sim, qual a temperatura máxima registrada?</h6>
-                        <div class="col-md-2">
-                            <div class="input-group mt-3">
-                                <input type="text" class="form-control" id="temperaturaMaxima" placeholder="00,0" disabled>
-                                <span class="input-group-text">°C</span>
+                    <div id="febreSection" class="d-none">
+                        <div class="col-md mt-4">
+                            <h6>Se sim, qual a temperatura máxima registrada?</h6>
+                            <div class="col-md-2">
+                                <div class="input-group mt-3">
+                                    <input type="text" class="form-control" id="temperaturaMaxima" placeholder="00,0" disabled>
+                                    <span class="input-group-text">°C</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-md mt-4">
-                        <h6>Você sentiu calafrios ou teve sudorese intensa?</h6>
-                    </div>
-                    <div class="form-check form-check-inline ms-3 mb-3">
-                        <input class="form-check-input" type="radio" name="calafrios" id="calafriosSim" value="sim" disabled>
-                        <label class="form-check-label" for="calafriosSim">Sim</label>
-                    </div>
-                    <div class="form-check form-check-inline mb-3">
-                        <input class="form-check-input" type="radio" name="calafrios" id="calafriosNao" value="nao" disabled>
-                        <label class="form-check-label" for="calafriosNao">Não</label>
+                        <div class="col-md mt-4">
+                            <h6>Você sentiu calafrios ou teve sudorese intensa?</h6>
+                        </div>
+                        <div class="form-check form-check-inline ms-3 mb-3">
+                            <input class="form-check-input" type="radio" name="calafrios" id="calafriosSim" value="sim" disabled>
+                            <label class="form-check-label" for="calafriosSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline mb-3">
+                            <input class="form-check-input" type="radio" name="calafrios" id="calafriosNao" value="nao" disabled>
+                            <label class="form-check-label" for="calafriosNao">Não</label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!---------------------- Febre/ -->
+
 
         <!---------------------- Dores musculares -->
         <div class="row gx-5">
@@ -144,52 +148,54 @@
                         <label class="form-check-label" for="doresNao">Não</label>
                     </div>
 
-                    <div id="bodyParts" class="col-md mt-4">
-                        <h6>Se sim, em que parte do corpo você sentiu dores?</h6>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="pescoco">
-                                    <label class="form-check-label" for="pescoco">Pescoço</label>
+                    <div id="DoresMuscularesSection" class="d-none">
+                        <div class="col-md mt-4">
+                            <h6>Se sim, em que parte do corpo você sentiu dores?</h6>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="pescoco">
+                                        <label class="form-check-label" for="pescoco">Pescoço</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="costas">
+                                        <label class="form-check-label" for="costas">Costas</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="braços">
+                                        <label class="form-check-label" for="braços">Braços</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="costas">
-                                    <label class="form-check-label" for="costas">Costas</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="pernas">
+                                        <label class="form-check-label" for="pernas">Pernas</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="articulacoes">
+                                        <label class="form-check-label" for="articulacoes">Articulações</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="corpoTodo">
+                                        <label class="form-check-label" for="corpoTodo">Corpo todo</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="braços">
-                                    <label class="form-check-label" for="braços">Braços</label>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <label for="outraDor" class="form-label">Sente dor em algum lugar específico que não foi listado? Digite aqui:</label>
+                                    <input type="text" class="form-control" id="outraDor" placeholder="" disabled>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="pernas">
-                                    <label class="form-check-label" for="pernas">Pernas</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="articulacoes">
-                                    <label class="form-check-label" for="articulacoes">Articulações</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="corpoTodo">
-                                    <label class="form-check-label" for="corpoTodo">Corpo todo</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-md-6">
-                                <label for="outraDor" class="form-label">Sente dor em algum lugar específico que não foi listado? Digite aqui:</label>
-                                <input type="text" class="form-control" id="outraDor" placeholder="" disabled>
                             </div>
                         </div>
                     </div>
@@ -197,6 +203,7 @@
             </div>
         </div>
         <!---------------------- Dores musculares/-->
+
 
         <!---------------------- Dores de cabeça -->
         <div class="row gx-5">
@@ -286,56 +293,57 @@
             </div>
         </div>
         <!---------------------- Dores de cabeça/-->
-<!---------------------- Problemas Gastrointestinais -->
-<div class="row gx-5">
-    <div class="col-md">
-        <div class="p-2">
-            <h5>Problemas Gastrointestinais</h5>
-            <hr>
+        
+        <!---------------------- Problemas Gastrointestinais -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <h5>Problemas gastrointestinais</h5>
+                    <hr>
 
-            <div class="col-md mt-4">
-                <h6>Você teve náuseas ou vômitos?</h6>
-                <div class="form-check form-check-inline ms-3 mb-3">
-                    <input class="form-check-input" type="radio" name="nauseaVomito" id="nauseaVomitoSim" value="sim">
-                    <label class="form-check-label" for="nauseaVomitoSim">Sim</label>
-                </div>
-                <div class="form-check form-check-inline mb-3">
-                    <input class="form-check-input" type="radio" name="nauseaVomito" id="nauseaVomitoNao" value="nao">
-                    <label class="form-check-label" for="nauseaVomitoNao">Não</label>
-                </div>
-            </div>
+                    <div class="col-md mt-4">
+                        <h6>Você teve náuseas ou vômitos?</h6>
+                        <div class="form-check form-check-inline ms-3 mb-3">
+                            <input class="form-check-input" type="radio" name="nauseaVomito" id="nauseaVomitoSim" value="sim">
+                            <label class="form-check-label" for="nauseaVomitoSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline mb-3">
+                            <input class="form-check-input" type="radio" name="nauseaVomito" id="nauseaVomitoNao" value="nao">
+                            <label class="form-check-label" for="nauseaVomitoNao">Não</label>
+                        </div>
+                    </div>
 
-            <div class="col-md mt-4">
-                <h6>Você apresentou diarreia?</h6>
-                <div class="form-check form-check-inline ms-3 mb-3">
-                    <input class="form-check-input" type="radio" name="diarreia" id="diarreiaSim" value="sim">
-                    <label class="form-check-label" for="diarreiaSim">Sim</label>
-                </div>
-                <div class="form-check form-check-inline mb-3">
-                    <input class="form-check-input" type="radio" name="diarreia" id="diarreiaNao" value="nao">
-                    <label class="form-check-label" for="diarreiaNao">Não</label>
-                </div>
-            </div>
+                    <div class="col-md mt-4">
+                        <h6>Você apresentou diarreia?</h6>
+                        <div class="form-check form-check-inline ms-3 mb-3">
+                            <input class="form-check-input" type="radio" name="diarreia" id="diarreiaSim" value="sim">
+                            <label class="form-check-label" for="diarreiaSim">Sim</label>
+                        </div>
+                        <div class="form-check form-check-inline mb-3">
+                            <input class="form-check-input" type="radio" name="diarreia" id="diarreiaNao" value="nao">
+                            <label class="form-check-label" for="diarreiaNao">Não</label>
+                        </div>
+                    </div>
 
-            <div id="frequenciaDiarreia" class="col-md mt-4">
-                <h6>Se sim, com que frequência?</h6>
-                <div class="form-check form-check-inline ms-3 mb-3">
-                    <input class="form-check-input" type="radio" name="frequenciaDiarreiaOp" id="frequenciaOcasional" value="ocasionalmente" disabled>
-                    <label class="form-check-label" for="frequenciaOcasional">Ocasionalmente</label>
-                </div>
-                <div class="form-check form-check-inline ms-3 mb-3">
-                    <input class="form-check-input" type="radio" name="frequenciaDiarreiaOp" id="frequenciaFrequente" value="frequentemente" disabled>
-                    <label class="form-check-label" for="frequenciaFrequente">Frequentemente</label>
-                </div>
-                <div class="form-check form-check-inline ms-3 mb-3">
-                    <input class="form-check-input" type="radio" name="frequenciaDiarreiaOp" id="frequenciaConstante" value="constantemente" disabled>
-                    <label class="form-check-label" for="frequenciaConstante">Constantemente</label>
+                    <div id="frequenciaDiarreia" class="col-md mt-4">
+                        <h6>Se sim, com que frequência?</h6>
+                        <div class="form-check form-check-inline ms-3 mb-3">
+                            <input class="form-check-input" type="radio" name="frequenciaDiarreiaOp" id="frequenciaOcasional" value="ocasionalmente" disabled>
+                            <label class="form-check-label" for="frequenciaOcasional">Ocasionalmente</label>
+                        </div>
+                        <div class="form-check form-check-inline ms-3 mb-3">
+                            <input class="form-check-input" type="radio" name="frequenciaDiarreiaOp" id="frequenciaFrequente" value="frequentemente" disabled>
+                            <label class="form-check-label" for="frequenciaFrequente">Frequentemente</label>
+                        </div>
+                        <div class="form-check form-check-inline ms-3 mb-3">
+                            <input class="form-check-input" type="radio" name="frequenciaDiarreiaOp" id="frequenciaConstante" value="constantemente" disabled>
+                            <label class="form-check-label" for="frequenciaConstante">Constantemente</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!---------------------- Problemas Gastrointestinais/-->
+        <!---------------------- Problemas Gastrointestinais/-->
 
 
 

@@ -442,22 +442,92 @@
         </div>
         <!---------------------- Sintomas de Pele/-->
 
+        <!---------------------- Histórico de Exposição a Animais -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <h5>Histórico de Exposição a Animais</h5>
+                    <hr>
 
+                    <div class="col-md mt-4">
+                        <h6>Você teve contato com animais (como ratos, cobras, cachorros...) recentemente?</h6>
+                    </div>
+                    <div class="form-check form-check-inline ms-3 mb-3">
+                        <input class="form-check-input" type="radio" name="animais" id="animaisSim" value="sim">
+                        <label class="form-check-label" for="animaisSim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-3">
+                        <input class="form-check-input" type="radio" name="animais" id="animaisNao" value="nao">
+                        <label class="form-check-label" for="animaisNao">Não</label>
+                    </div>
 
+                    <div id="AnimaisSection" class="d-none">
+                        <div class="col-md-4 mt-4">
+                            <h6>Se sim, qual tipo de animal?</h6>
+                            <input type="text" class="form-control" id="tipoAnimal" placeholder="Digite o tipo de animal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------- Histórico de Exposição a Animais/-->
+        <!---------------------- Outros Sintomas -->
+        <div class="row gx-5">
+            <div class="col-md">
+                <div class="p-2">
+                    <h5>Outros Sintomas</h5>
+                    <hr>
 
+                    <div class="col-md mt-4">
+                        <h6>Você teve algum outro sintoma não listado acima?</h6>
+                    </div>
+                    <div class="form-check form-check-inline ms-3 mb-3">
+                        <input class="form-check-input" type="radio" name="outrosSintomas" id="outrosSintomasSim" value="sim">
+                        <label class="form-check-label" for="outrosSintomasSim">Sim</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-3">
+                        <input class="form-check-input" type="radio" name="outrosSintomas" id="outrosSintomasNao" value="nao">
+                        <label class="form-check-label" for="outrosSintomasNao">Não</label>
+                    </div>
 
+                    <div id="OutrosSintomasSection" class="d-none">
+                        <div class="col-md mt-4">
+                            <h6>Se sim, descreva:</h6>
+                            <textarea class="form-control" id="descricaoOutrosSintomas" placeholder="Descreva os sintomas"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------- Outros Sintomas/-->
 
+        <!---------------------- Informações Adicionais -->
+        <div class="row gx-5 mt-4">
+            <div class="col-md">
+                <div class="p-2">
+                    <h5>Informações adicionais</h5>
+                    <hr>
 
-
-
-
-
-
-
-
-
+                    <div class="col-md mt-4">
+                        <h6>Caso tenha mais informações relevantes que possa nos ajudar a avaliar seu caso, você pode descrevê-las a seguir:</h6>
+                        <textarea class="form-control" id="informacoesAdicionais" placeholder="Descreva as informações adicionais"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---------------------- Informações Adicionais/-->
 
         <!---------------------- Sintomas/ -->
+
+        <!---------------------- Próxima página -->
+        <div class="col-md">
+            <hr class="transparent-line">
+            <div class="d-flex justify-content-start mt-3 gap-3">
+                <a href="formulario2.html" class="btn btn-primary px-5" role="button">Anterior</a>
+                <a href="index.html" class="btn btn-primary px-5" role="button">Próximo</a>
+            </div>
+        </div>
+        <!---------------------- Próxima página -->
 
     </div>
     <!-- Formulário/ -->

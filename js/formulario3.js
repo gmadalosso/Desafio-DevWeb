@@ -390,3 +390,79 @@ document.addEventListener('DOMContentLoaded', function() {
         togglePeleSection(false);
     }
 });
+
+//Exposição a animais
+document.addEventListener('DOMContentLoaded', function() {
+    // Histórico de Exposição a Animais
+    const animaisSim = document.getElementById('animaisSim');
+    const animaisNao = document.getElementById('animaisNao');
+    const AnimaisSection = document.getElementById('AnimaisSection');
+    const tipoAnimal = document.getElementById('tipoAnimal');
+
+    function toggleAnimaisSection(show) {
+        if (show) {
+            AnimaisSection.classList.remove('d-none');
+            tipoAnimal.disabled = false;
+        } else {
+            AnimaisSection.classList.add('d-none');
+            tipoAnimal.disabled = true;
+            tipoAnimal.value = '';
+        }
+    }
+
+    animaisSim.addEventListener('change', function() {
+        if (this.checked) {
+            toggleAnimaisSection(true);
+        }
+    });
+
+    animaisNao.addEventListener('change', function() {
+        if (this.checked) {
+            toggleAnimaisSection(false);
+        }
+    });
+
+    if (animaisSim.checked) {
+        toggleAnimaisSection(true);
+    } else {
+        toggleAnimaisSection(false);
+    }
+});
+
+//Outros sintomas
+document.addEventListener('DOMContentLoaded', function() {
+    // Outros Sintomas
+    const outrosSintomasSim = document.getElementById('outrosSintomasSim');
+    const outrosSintomasNao = document.getElementById('outrosSintomasNao');
+    const OutrosSintomasSection = document.getElementById('OutrosSintomasSection');
+    const descricaoOutrosSintomas = document.getElementById('descricaoOutrosSintomas');
+
+    function toggleOutrosSintomasSection(show) {
+        if (show) {
+            OutrosSintomasSection.classList.remove('d-none');
+            descricaoOutrosSintomas.disabled = false;
+        } else {
+            OutrosSintomasSection.classList.add('d-none');
+            descricaoOutrosSintomas.disabled = true;
+            descricaoOutrosSintomas.value = '';
+        }
+    }
+
+    outrosSintomasSim.addEventListener('change', function() {
+        if (this.checked) {
+            toggleOutrosSintomasSection(true);
+        }
+    });
+
+    outrosSintomasNao.addEventListener('change', function() {
+        if (this.checked) {
+            toggleOutrosSintomasSection(false);
+        }
+    });
+
+    if (outrosSintomasSim.checked) {
+        toggleOutrosSintomasSection(true);
+    } else {
+        toggleOutrosSintomasSection(false);
+    }
+});

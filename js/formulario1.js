@@ -63,4 +63,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    document.getElementById('botaoProximaPagina').addEventListener('click', function() {
+        const DadosFormulario = {
+            primeiroNome: document.getElementById('primeiroNome').value,
+            sobrenome: document.getElementById('sobrenome').value,
+            cpf: document.getElementById('cpf').value,
+            dataNascimento: document.getElementById('dataNascimento').value,
+            sexoBiologico: document.getElementById('sexoBiologico').value,
+            ddd: document.getElementById('ddd').value,
+            numeroTelefone: document.getElementById('numeroTelefone').value,
+            email: document.getElementById('email').value,
+            nomeEmergencia: document.getElementById('nomeEmergencia').value,
+            sobrenomeEmergencia: document.getElementById('sobrenomeEmergencia').value,
+            dddEmergencia: document.getElementById('dddEmergencia').value,
+            numeroTelefoneEmergencia: document.getElementById('numeroTelefoneEmergencia').value,
+            emailEmergencia: document.getElementById('emailEmergencia').value
+        };
+        localStorage.setItem('formulario1', JSON.stringify(DadosFormulario));
+        window.location.href = 'formulario2.html'; 
+    });
 });

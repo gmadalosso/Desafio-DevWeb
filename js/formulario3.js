@@ -466,3 +466,19 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleOutrosSintomasSection(false);
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    function mostraModal() {
+        const Modal = new bootstrap.Modal(document.getElementById('Modal'));
+        Modal.show();
+    }
+
+    const finalizarButton = document.querySelector('a[role="button"][href="index.html"]');
+    if (finalizarButton) {
+        finalizarButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            mostraModal();
+        });
+    }
+});
+
